@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 import Section from '../components/Section'
 import { ServiceCard, TestimonialCard } from '../components/Card'
 import CTA from '../components/CTA'
-import { services, solutions, products } from '../data/site'
+import { services, solutions, products, testimonials } from '../data/site'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, Users, TrendingUp, Shield, Zap } from 'lucide-react'
@@ -10,34 +10,10 @@ import { cn } from '../lib/utils'
 
 export default function Home(){
   const stats = [
-    { label: "Projects Delivered", value: "500+", icon: TrendingUp },
-    { label: "Happy Clients", value: "200+", icon: Users },
+    { label: "Projects Delivered", value: "5+", icon: TrendingUp },
+    { label: "Happy Clients", value: "8+", icon: Users },
     { label: "Uptime Guarantee", value: "99.9%", icon: Shield },
-    { label: "Team Members", value: "25+", icon: Zap }
-  ]
-
-  const testimonials = [
-    {
-      quote: "Clocktela transformed our business with their innovative software solutions. The team's expertise and dedication exceeded our expectations.",
-      author: "Sarah Johnson",
-      role: "CTO",
-      company: "TechCorp Inc.",
-      avatar: "/avatars/sarah.jpg"
-    },
-    {
-      quote: "Working with Clocktela was a game-changer for our startup. They delivered our MVP in record time with exceptional quality.",
-      author: "Michael Chen",
-      role: "Founder",
-      company: "StartupXYZ",
-      avatar: "/avatars/michael.jpg"
-    },
-    {
-      quote: "The AI solutions Clocktela built for us have increased our efficiency by 300%. Highly recommended for any business looking to scale.",
-      author: "Emily Rodriguez",
-      role: "Operations Director",
-      company: "ScaleUp Solutions",
-      avatar: "/avatars/emily.jpg"
-    }
+    { label: "Team Members", value: "6+", icon: Zap }
   ]
 
   return (
@@ -168,7 +144,7 @@ export default function Home(){
       {/* Testimonials Section */}
       <Section 
         title="What Our Clients Say" 
-        subtitle="Don't just take our word for it. Here's what our clients have to say about working with Clocktela."
+        subtitle="Don't just take our word for it. Here's what our Pakistani clients have to say about working with Clocktela."
         className="bg-gradient-to-r from-brand/5 to-brand-light/5"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -180,6 +156,7 @@ export default function Home(){
               role={testimonial.role}
               company={testimonial.company}
               avatar={testimonial.avatar}
+              location={testimonial.location}
             />
           ))}
         </div>

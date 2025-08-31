@@ -27,30 +27,30 @@ export default function About(){
   ]
 
   const stats = [
-    { label: "Years Experience", value: "8+", icon: Award },
-    { label: "Projects Completed", value: "500+", icon: TrendingUp },
-    { label: "Happy Clients", value: "200+", icon: Heart },
-    { label: "Countries Served", value: "25+", icon: Globe }
+    { label: "Projects Completed", value: "5+", icon: TrendingUp },
+    { label: "Happy Clients", value: "8+", icon: Heart },
+    { label: "Team Members", value: "6+", icon: Users },
+    { label: "Cities Served", value: "3+", icon: Globe }
   ]
 
   const team = [
+          {
+        name: "Hamaad Ayub Khan",
+        role: "CEO & Founder",
+        bio: "Passionate entrepreneur with expertise in software development and business strategy. Leading Clocktela's vision to transform Pakistani businesses through technology.",
+        image: "/team/hamaad.jpg"
+      },
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      bio: "Former tech lead at Google with 10+ years in software development.",
-      image: "/team/sarah.jpg"
-    },
-    {
-      name: "Michael Chen",
+      name: "Fatima Ali",
       role: "CTO",
-      bio: "Expert in cloud architecture and AI systems with a PhD in Computer Science.",
-      image: "/team/michael.jpg"
+      bio: "Experienced full-stack developer specializing in modern web technologies and AI solutions. Committed to delivering scalable and innovative software solutions.",
+      image: "/team/fatima.jpg"
     },
     {
-      name: "Emily Rodriguez",
+      name: "Usman Hassan",
       role: "Head of Design",
-      bio: "Award-winning designer with experience at top design agencies.",
-      image: "/team/emily.jpg"
+      bio: "Creative designer focused on user experience and modern UI/UX principles. Bringing beautiful and functional designs to life for our clients.",
+      image: "/team/usman.jpg"
     }
   ]
 
@@ -59,7 +59,7 @@ export default function About(){
       {/* Hero Section */}
       <Section 
         title="About Clocktela" 
-        subtitle="We're designers, engineers, and problem‑solvers obsessed with impact."
+        subtitle="We're a passionate team of designers, engineers, and problem‑solvers dedicated to transforming businesses through technology."
         className="pt-24 pb-16"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -71,17 +71,19 @@ export default function About(){
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="prose prose-zinc dark:prose-invert max-w-none">
               <p className="text-lg leading-relaxed mb-6">
-                Clocktela is a boutique software studio crafting AI‑powered, cloud‑native products. 
-                We partner with startups and enterprises to deliver fast, reliable, and beautiful experiences.
+                Clocktela is a newly established software studio based in Islamabad, Pakistan, crafting AI‑powered, 
+                cloud‑native products. We partner with startups and enterprises to deliver fast, reliable, and 
+                beautiful experiences that drive business growth.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                Founded in 2016, we've grown from a small team of passionate developers to a full-service 
-                software studio serving clients worldwide. We believe in small, senior teams; strong product 
-                thinking; and continuous delivery.
+                Founded in 2024, we've quickly built a reputation for excellence, completing 5+ successful projects 
+                and serving clients across Pakistan. Our small but experienced team brings together diverse expertise 
+                in modern technologies, AI, and cloud solutions.
               </p>
               <p className="text-lg leading-relaxed">
-                Our mission is to help businesses leverage technology to solve complex problems and 
-                create meaningful impact in their industries.
+                Our mission is to help Pakistani businesses leverage cutting-edge technology to solve complex problems 
+                and create meaningful impact in their industries, while maintaining the highest standards of quality 
+                and innovation.
               </p>
             </div>
           </motion.div>
@@ -198,14 +200,14 @@ export default function About(){
             className="prose prose-zinc dark:prose-invert mx-auto"
           >
             <p className="text-xl leading-relaxed mb-8">
-              At Clocktela, we're passionate about using technology to solve real-world problems. 
-              We believe that great software has the power to transform businesses, improve lives, 
-              and create lasting impact.
+              At Clocktela, we're passionate about using technology to solve real-world problems for Pakistani businesses. 
+              We believe that great software has the power to transform businesses, improve lives, and create lasting 
+              impact in our local economy.
             </p>
             <p className="text-xl leading-relaxed">
               Our commitment is to deliver exceptional value to our clients through innovative solutions, 
               transparent communication, and unwavering dedication to quality. We're not just building 
-              software—we're building partnerships for the future.
+              software—we're building partnerships for the future of Pakistan's digital economy.
             </p>
           </motion.div>
         </div>

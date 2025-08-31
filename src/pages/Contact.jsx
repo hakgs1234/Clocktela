@@ -1,30 +1,39 @@
 import Section from '../components/Section'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
-import { useState } from 'react'
-import { storage, analytics } from '../lib/utils'
+import { useState, useRef } from 'react'
+import { site } from '../data/site'
+import emailjs from '@emailjs/browser'
+import { useEffect } from 'react'
 
 export default function Contact(){
+  const form = useRef()
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [statusMessage, setStatusMessage] = useState("")
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("Uy6SK_36nOFWNWXAb")
+  }, [])
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@clocktela.dev",
+      details: site.footer.email,
       description: "We'll respond within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (234) 567-890",
-      description: "Mon-Fri from 9am to 6pm EST"
+      details: site.footer.phone,
+      description: "Mon-Fri from 9am to 6pm PKT"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Clocktela HQ, Lahore, Pakistan",
+      details: site.footer.address,
       description: "Schedule an in-person meeting"
     }
   ]
@@ -35,26 +44,38 @@ export default function Contact(){
     { day: "Sunday", hours: "Closed" }
   ]
 
-  const onSubmit = async (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault()
     setLoading(true)
+    setStatusMessage("")
     
-    const data = Object.fromEntries(new FormData(e.target).entries())
-    const list = storage.get('messages', [])
-    list.push({ ...data, date: new Date().toISOString() })
-    storage.set('messages', JSON.stringify(list))
-    
-    analytics.track('contact_form_submitted', { 
-      name: data.name, 
-      email: data.email,
-      company: data.company 
-    })
-    
-    e.target.reset()
-    setLoading(false)
-    setSubmitted(true)
-    
-    setTimeout(() => setSubmitted(false), 5000)
+    try {
+      // Send email with timeout
+      const emailPromise = emailjs.sendForm(
+        "service_wef4h3h", 
+        "template_oiswnqt", 
+        form.current, 
+        "Uy6SK_36nOFWNWXAb"
+      )
+
+      // Add timeout to prevent hanging
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Request timeout after 10 seconds')), 10000)
+      )
+
+      await Promise.race([emailPromise, timeoutPromise])
+      
+      setStatusMessage("✅ Message sent successfully!")
+      setSubmitted(true)
+      setLoading(false)
+      form.current.reset()
+      setTimeout(() => setSubmitted(false), 5000)
+      
+    } catch (error) {
+      console.error("EmailJS Error:", error)
+      setStatusMessage(`❌ Failed to send message: ${error.message || 'Unknown error'}`)
+      setLoading(false)
+    }
   }
 
   return (
@@ -85,14 +106,30 @@ export default function Contact(){
                 </motion.div>
               )}
 
-              <form onSubmit={onSubmit} className="space-y-6">
+              {statusMessage && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`mb-6 p-4 rounded-xl flex items-center gap-3 ${
+                    statusMessage.includes("✅") 
+                      ? "bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800" 
+                      : "bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"
+                  }`}
+                >
+                  <span className={statusMessage.includes("✅") ? "text-green-800 dark:text-green-200" : "text-red-800 dark:text-red-200"}>
+                    {statusMessage}
+                  </span>
+                </motion.div>
+              )}
+
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
                       Full Name *
                     </label>
                     <input 
-                      name="name" 
+                      name="user_name" 
                       required 
                       placeholder="John Doe"
                       className="w-full px-4 py-3 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-brand focus:border-transparent transition-all duration-200"
@@ -103,7 +140,7 @@ export default function Contact(){
                       Email *
                     </label>
                     <input 
-                      name="email" 
+                      name="user_email" 
                       type="email" 
                       required 
                       placeholder="john@company.com"
@@ -146,7 +183,7 @@ export default function Contact(){
                     Project Details *
                   </label>
                   <textarea 
-                    name="details" 
+                    name="message" 
                     rows="5" 
                     required
                     placeholder="Tell us about your project, goals, and requirements..."

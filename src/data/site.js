@@ -14,13 +14,13 @@ export const site = {
     { to: "/contact", label: "Contact" }
   ],
   socials: [
-    { label: "GitHub", href: "https://github.com/" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/" },
-    { label: "Twitter", href: "https://x.com/" }
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/clocktela/" },
+    { label: "X", href: "https://x.com/clocktela" }
   ],
   footer: {
-    email: "hello@clocktela.dev",
-    address: "Clocktela HQ, Lahore, Pakistan"
+    email: "clocktela@gmail.com",
+    phone: "+92 3196018340",
+    address: "Islamabad, Pakistan"
   }
 }
 
@@ -58,4 +58,31 @@ export const posts = [
   { slug: "shipping-faster-with-vite", title: "Shipping Faster with Vite + React", excerpt: "Why Vite supercharges DX and performance.", content: "Vite offers instant HMR, native ESM, and a lean build pipeline..." },
   { slug: "design-systems-that-scale", title: "Design Systems that Scale", excerpt: "How to keep product velocity while staying consistent.", content: "A modern design system relies on tokens, composition, and strong docs..." },
   { slug: "rag-in-production", title: "RAG in Production: Lessons", excerpt: "From prototype to reliable retrieval.", content: "Chunking strategies, evals, guardrails, and observability..." }
+]
+
+export const testimonials = [
+  {
+    quote: "Clocktela delivered our e-commerce platform in record time. Their expertise in modern tech stacks and attention to detail exceeded our expectations. Highly recommended for any Pakistani business looking to go digital.",
+    author: "Ahmed Khan",
+    role: "CEO",
+    company: "PakMart Solutions",
+    avatar: "/avatars/ahmed.jpg",
+    location: "Karachi, Pakistan"
+  },
+  {
+    quote: "As a startup in Lahore, we needed a reliable tech partner. Clocktela not only built our MVP but also guided us through the entire development process. Their local understanding and global standards are unmatched.",
+    author: "Fatima Ali",
+    role: "Founder",
+    company: "TechStart Pakistan",
+    avatar: "/avatars/fatima.jpg",
+    location: "Lahore, Pakistan"
+  },
+  {
+    quote: "The AI-powered analytics dashboard Clocktela built for us has transformed how we make business decisions. Their innovative approach and commitment to quality make them the go-to choice for Pakistani enterprises.",
+    author: "Usman Hassan",
+    role: "CTO",
+    company: "DataFlow Systems",
+    avatar: "/avatars/usman.jpg",
+    location: "Islamabad, Pakistan"
+  }
 ]

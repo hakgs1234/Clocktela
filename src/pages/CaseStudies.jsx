@@ -5,138 +5,142 @@ import { Link } from 'react-router-dom'
 
 const caseStudies = [
   {
-    id: 'fintech-banking',
-    title: "FinTech Banking Platform",
-    subtitle: "0→1 in 12 weeks",
-    industry: "Financial Services",
-    duration: "12 weeks",
-    team: "8 developers",
-    description: "Built a secure mobile banking MVP with comprehensive financial services, real-time transactions, and advanced security features.",
-    challenge: "A startup needed to launch a secure, compliant banking platform within 3 months to meet regulatory deadlines and investor requirements.",
-    solution: "Developed a full-stack banking solution with biometric authentication, real-time payment processing, and comprehensive compliance features.",
-    results: [
-      { metric: "50K+", label: "Active Users" },
-      { metric: "99.9%", label: "Uptime" },
-      { metric: "12 weeks", label: "Time to Market" },
-      { metric: "$2M+", label: "Revenue Generated" }
-    ],
-    technologies: ["React Native", "Node.js", "PostgreSQL", "AWS", "Stripe"],
-    features: [
-      "Biometric authentication",
-      "Real-time payments",
-      "Multi-currency support",
-      "Advanced fraud detection",
-      "Compliance dashboard"
-    ],
-    testimonial: {
-      quote: "Clocktela delivered our banking platform ahead of schedule with exceptional quality. Their expertise in fintech and security was invaluable.",
-      author: "Sarah Chen",
-      role: "CTO",
-      company: "NeoBank Solutions"
-    },
-    image: "/api/placeholder/600/400"
-  },
-  {
-    id: 'healthcare-telemedicine',
-    title: "Telehealth Platform",
-    subtitle: "Healthcare Revolution",
-    industry: "Healthcare",
-    duration: "16 weeks",
-    team: "12 developers",
-    description: "Developed a comprehensive telehealth platform connecting patients with healthcare providers across multiple regions.",
-    challenge: "A healthcare network needed to expand their services digitally while maintaining HIPAA compliance and ensuring seamless patient experience.",
-    solution: "Created a full-featured telehealth platform with video consultations, e-prescriptions, patient management, and secure data handling.",
-    results: [
-      { metric: "100K+", label: "Patients Served" },
-      { metric: "500+", label: "Healthcare Providers" },
-      { metric: "95%", label: "Patient Satisfaction" },
-      { metric: "40%", label: "Cost Reduction" }
-    ],
-    technologies: ["React", "WebRTC", "Python", "MongoDB", "Azure"],
-    features: [
-      "HD video consultations",
-      "E-prescription system",
-      "Patient portal",
-      "Appointment scheduling",
-      "Medical records management"
-    ],
-    testimonial: {
-      quote: "The platform has transformed how we deliver care. Clocktela's understanding of healthcare regulations and user experience was outstanding.",
-      author: "Dr. Michael Rodriguez",
-      role: "Medical Director",
-      company: "HealthConnect Network"
-    },
-    image: "/api/placeholder/600/400"
-  },
-  {
-    id: 'retail-analytics',
-    title: "Retail Analytics Platform",
-    subtitle: "Smart Inventory Management",
+    id: 'ecommerce-platform',
+    title: "E-Commerce Platform",
+    subtitle: "Digital Transformation",
     industry: "Retail",
-    duration: "20 weeks",
-    team: "10 developers",
-    description: "Built an AI-powered retail analytics platform with computer vision for inventory management and customer insights.",
-    challenge: "A retail chain was losing 20% of inventory to theft and inefficiencies, needing real-time analytics and automated inventory tracking.",
-    solution: "Developed an edge computing solution with computer vision, IoT sensors, and predictive analytics for comprehensive retail intelligence.",
+    duration: "8 weeks",
+    team: "4 developers",
+    description: "Built a modern e-commerce platform for a Pakistani retail business, enabling online sales and digital transformation.",
+    challenge: "A traditional retail store in Karachi needed to establish an online presence to compete with modern e-commerce players and reach customers nationwide.",
+    solution: "Developed a full-featured e-commerce platform with secure payment integration, inventory management, and mobile-responsive design optimized for Pakistani market.",
     results: [
-      { metric: "20%", label: "Shrink Reduction" },
-      { metric: "30%", label: "Efficiency Gain" },
-      { metric: "Real-time", label: "Inventory Tracking" },
-      { metric: "$5M+", label: "Annual Savings" }
+      { metric: "500+", label: "Products Listed" },
+      { metric: "200+", label: "Monthly Orders" },
+      { metric: "8 weeks", label: "Time to Market" },
+      { metric: "40%", label: "Revenue Increase" }
     ],
-    technologies: ["Python", "TensorFlow", "React", "Kubernetes", "GCP"],
+    technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
     features: [
-      "Computer vision analytics",
-      "Real-time inventory tracking",
-      "Predictive demand forecasting",
-      "Customer behavior insights",
-      "Automated reporting"
+      "Secure payment gateway",
+      "Inventory management",
+      "Order tracking system",
+      "Mobile-responsive design",
+      "Admin dashboard"
     ],
     testimonial: {
-      quote: "Clocktela's retail analytics platform has revolutionized our operations. The AI insights have saved us millions in inventory costs.",
-      author: "Jennifer Park",
-      role: "Operations Director",
-      company: "RetailCorp International"
+      quote: "Clocktela transformed our traditional business into a modern e-commerce platform. Their understanding of the Pakistani market and technical expertise exceeded our expectations.",
+      author: "Ahmed Khan",
+      role: "CEO",
+      company: "PakMart Solutions",
+      location: "Karachi, Pakistan"
     },
     image: "/api/placeholder/600/400"
   },
   {
-    id: 'logistics-automation',
-    title: "Logistics Automation System",
-    subtitle: "Supply Chain Optimization",
-    industry: "Logistics",
-    duration: "24 weeks",
-    team: "15 developers",
-    description: "Created an intelligent logistics platform that optimizes routes, reduces delivery times, and improves fleet management.",
-    challenge: "A logistics company needed to reduce delivery times by 30% while managing a fleet of 500+ vehicles across multiple regions.",
-    solution: "Built an AI-powered logistics platform with real-time tracking, route optimization, and predictive maintenance capabilities.",
+    id: 'startup-mvp',
+    title: "Startup MVP Platform",
+    subtitle: "From Idea to Launch",
+    industry: "Technology",
+    duration: "6 weeks",
+    team: "3 developers",
+    description: "Developed a minimum viable product for a Lahore-based startup, helping them validate their business idea and secure funding.",
+    challenge: "A startup in Lahore needed to quickly build and launch an MVP to validate their business concept and attract potential investors within a tight timeline.",
+    solution: "Created a lean MVP with core features, user authentication, and analytics to help the startup test their hypothesis and gather user feedback.",
     results: [
-      { metric: "30%", label: "Delivery Time Reduction" },
-      { metric: "25%", label: "Fuel Cost Savings" },
-      { metric: "500+", label: "Vehicles Managed" },
-      { metric: "99.5%", label: "On-time Delivery" }
+      { metric: "1000+", label: "Beta Users" },
+      { metric: "85%", label: "User Retention" },
+      { metric: "6 weeks", label: "Development Time" },
+      { metric: "$50K+", label: "Funding Secured" }
     ],
-    technologies: ["Java", "Spring Boot", "React", "PostgreSQL", "AWS"],
+    technologies: ["React", "Firebase", "Tailwind CSS", "Vercel", "Analytics"],
     features: [
-      "AI route optimization",
-      "Real-time fleet tracking",
-      "Predictive maintenance",
-      "Driver performance analytics",
-      "Automated dispatching"
+      "User authentication",
+      "Core functionality",
+      "Analytics dashboard",
+      "Feedback system",
+      "Admin panel"
     ],
     testimonial: {
-      quote: "Clocktela's logistics platform has transformed our operations. The AI optimization has significantly improved our efficiency and customer satisfaction.",
-      author: "David Thompson",
-      role: "CEO",
-      company: "FastTrack Logistics"
+      quote: "Clocktela helped us go from concept to launch in just 6 weeks. Their agile approach and technical expertise were crucial in securing our first round of funding.",
+      author: "Fatima Ali",
+      role: "Founder",
+      company: "TechStart Pakistan",
+      location: "Lahore, Pakistan"
+    },
+    image: "/api/placeholder/600/400"
+  },
+  {
+    id: 'analytics-dashboard',
+    title: "AI Analytics Dashboard",
+    subtitle: "Data-Driven Decisions",
+    industry: "Technology",
+    duration: "10 weeks",
+    team: "5 developers",
+    description: "Built an AI-powered analytics dashboard for a Pakistani enterprise, providing real-time insights and predictive analytics.",
+    challenge: "An Islamabad-based company needed to consolidate data from multiple sources and provide actionable insights to improve business decision-making.",
+    solution: "Developed a comprehensive analytics platform with AI-powered insights, real-time data visualization, and predictive analytics capabilities.",
+    results: [
+      { metric: "Real-time", label: "Data Processing" },
+      { metric: "50%", label: "Decision Speed" },
+      { metric: "10+", label: "Data Sources" },
+      { metric: "95%", label: "Accuracy Rate" }
+    ],
+    technologies: ["Python", "React", "TensorFlow", "PostgreSQL", "Docker"],
+    features: [
+      "Real-time analytics",
+      "AI-powered insights",
+      "Custom dashboards",
+      "Data visualization",
+      "Predictive modeling"
+    ],
+    testimonial: {
+      quote: "The AI analytics dashboard has revolutionized how we make business decisions. Clocktela's innovative approach and commitment to quality make them the go-to choice for Pakistani enterprises.",
+      author: "Usman Hassan",
+      role: "CTO",
+      company: "DataFlow Systems",
+      location: "Islamabad, Pakistan"
+    },
+    image: "/api/placeholder/600/400"
+  },
+  {
+    id: 'healthcare-management',
+    title: "Healthcare Management System",
+    subtitle: "Digital Healthcare",
+    industry: "Healthcare",
+    duration: "12 weeks",
+    team: "6 developers",
+    description: "Created a comprehensive healthcare management system for a medical facility in Pakistan, streamlining patient care and administrative processes.",
+    challenge: "A medical facility needed to digitize their patient records, appointment scheduling, and administrative processes to improve efficiency and patient care.",
+    solution: "Built a secure healthcare management system with patient portals, appointment scheduling, medical records, and administrative tools compliant with local regulations.",
+    results: [
+      { metric: "1000+", label: "Patients Managed" },
+      { metric: "60%", label: "Efficiency Gain" },
+      { metric: "24/7", label: "System Availability" },
+      { metric: "99.9%", label: "Data Security" }
+    ],
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
+    features: [
+      "Patient management",
+      "Appointment scheduling",
+      "Medical records",
+      "Billing system",
+      "Admin dashboard"
+    ],
+    testimonial: {
+      quote: "Clocktela's healthcare management system has transformed our facility. The system is intuitive, secure, and has significantly improved our patient care and operational efficiency.",
+      author: "Dr. Aisha Malik",
+      role: "Medical Director",
+      company: "HealthCare Plus",
+      location: "Lahore, Pakistan"
     },
     image: "/api/placeholder/600/400"
   }
 ]
 
 const stats = [
-  { icon: TrendingUp, value: "150+", label: "Projects Delivered" },
-  { icon: Users, value: "50+", label: "Happy Clients" },
+  { icon: TrendingUp, value: "5+", label: "Projects Delivered" },
+  { icon: Users, value: "8+", label: "Happy Clients" },
   { icon: Zap, value: "99.9%", label: "Uptime Guarantee" },
   { icon: Star, value: "4.9/5", label: "Client Rating" }
 ]
@@ -146,7 +150,7 @@ export default function CaseStudies(){
     <div>
       <Section 
         title="Case Studies" 
-        subtitle="Real-world solutions that drive business transformation."
+        subtitle="Real-world solutions that drive business transformation for Pakistani companies."
         className="pt-24 pb-16"
       >
         <div className="max-w-7xl mx-auto">
@@ -272,6 +276,11 @@ export default function CaseStudies(){
                             <div className="text-sm text-zinc-600 dark:text-zinc-400">
                               {study.testimonial.role}, {study.testimonial.company}
                             </div>
+                            {study.testimonial.location && (
+                              <div className="text-xs text-zinc-500 dark:text-zinc-500">
+                                {study.testimonial.location}
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
