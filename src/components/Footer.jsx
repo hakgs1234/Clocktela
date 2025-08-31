@@ -1,6 +1,6 @@
 import { site } from '../data/site'
 import { Link } from 'react-router-dom'
-import { Github, Linkedin, Twitter, Mail, MapPin, Phone, ArrowRight, Heart } from 'lucide-react'
+import { Linkedin, Twitter, Mail, MapPin, Phone, ArrowRight, Heart } from 'lucide-react'
 import { useState } from 'react'
 import { cn, storage, analytics } from '../lib/utils'
 
@@ -51,9 +51,8 @@ export default function Footer(){
   }
 
   const socialLinks = [
-    { label: 'GitHub', href: 'https://github.com/', icon: Github },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: Linkedin },
-    { label: 'Twitter', href: 'https://x.com/', icon: Twitter }
+    { label: 'LinkedIn', href: site.socials[0].href, icon: Linkedin },
+    { label: 'X', href: site.socials[1].href, icon: Twitter }
   ]
 
   return (
@@ -87,8 +86,8 @@ export default function Footer(){
               </div>
               <div className="flex items-center gap-3 text-sm text-zinc-600 dark:text-zinc-400">
                 <Phone className="w-4 h-4" />
-                <a href="tel:+1234567890" className="hover:text-brand transition-colors">
-                  +1 (234) 567-890
+                <a href={`tel:${site.footer.phone}`} className="hover:text-brand transition-colors">
+                  {site.footer.phone}
                 </a>
               </div>
             </div>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Phone, Mail, MessageCircle } from 'lucide-react'
 import { cn } from '../lib/utils'
+import { site } from '../data/site'
 
 export default function CTA({ 
   title = "Ready to get started?",
@@ -84,7 +85,7 @@ export default function CTA({
                 )}
               >
                 {secondaryAction.label}
-                <Phone className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" />
               </Link>
             )}
           </div>
@@ -99,7 +100,7 @@ export default function CTA({
               <div className="text-left">
                 <div className={cn("font-semibold", textVariants[variant])}>Email Us</div>
                 <div className={cn("text-sm", variant === "default" ? "text-white/80" : "text-zinc-600 dark:text-zinc-400")}>
-                  hello@clocktela.dev
+                  {site.footer.email}
                 </div>
               </div>
             </div>
@@ -112,7 +113,7 @@ export default function CTA({
               <div className="text-left">
                 <div className={cn("font-semibold", textVariants[variant])}>Call Us</div>
                 <div className={cn("text-sm", variant === "default" ? "text-white/80" : "text-zinc-600 dark:text-zinc-400")}>
-                  +1 (234) 567-890
+                  {site.footer.phone}
                 </div>
               </div>
             </div>

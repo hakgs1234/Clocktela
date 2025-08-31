@@ -87,7 +87,7 @@ export function ServiceCard({ title, description, icon: Icon, features = [], hre
   )
 }
 
-export function TestimonialCard({ quote, author, role, company, avatar }) {
+export function TestimonialCard({ quote, author, role, company, avatar, location }) {
   return (
     <Card className="relative">
       <div className="flex flex-col h-full">
@@ -115,6 +115,11 @@ export function TestimonialCard({ quote, author, role, company, avatar }) {
             <div className="text-sm text-zinc-600 dark:text-zinc-400">
               {role} at {company}
             </div>
+            {location && (
+              <div className="text-xs text-zinc-500 dark:text-zinc-500">
+                {location}
+              </div>
+            )}
           </div>
         </div>
       </div>

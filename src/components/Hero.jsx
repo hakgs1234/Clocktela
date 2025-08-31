@@ -64,7 +64,7 @@ export default function Hero(){
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand font-medium text-sm mb-8"
           >
             <Star className="w-4 h-4 fill-current" />
-            Trusted by 500+ companies worldwide
+            Trusted by 8+ Pakistani companies
           </motion.div>
 
           {/* Main Heading */}
@@ -90,7 +90,7 @@ export default function Hero(){
             className="text-lg md:text-xl lg:text-2xl text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             We design, build, and scale delightful software, powered by AI and cloud-native best practices. 
-            Transform your ideas into reality with our expert team.
+            Transform your ideas into reality with our expert team based in Islamabad, Pakistan.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -118,7 +118,7 @@ export default function Hero(){
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto mb-12"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand mb-2">500+</div>
+              <div className="text-3xl font-bold text-brand mb-2">5+</div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">Projects Delivered</div>
             </div>
             <div className="text-center">
@@ -136,7 +136,7 @@ export default function Hero(){
             variants={itemVariants}
             className="flex flex-col items-center gap-4"
           >
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">Trusted by industry leaders</p>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">Trusted by Pakistani businesses</p>
             <div className="flex items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
               {/* Placeholder logos - replace with actual client logos */}
               <div className="w-20 h-8 bg-zinc-300 dark:bg-zinc-700 rounded"></div>
